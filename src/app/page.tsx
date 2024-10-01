@@ -7,7 +7,7 @@ export default function Home() {
       <div>
         <Text />
         <Scene />
-      </div>
+       </div>
     </main>
   );
 }
