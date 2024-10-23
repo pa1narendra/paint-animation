@@ -1,6 +1,6 @@
-"use client";
-import React, { useEffect, useRef } from "react";
-import useWindow from "./useWindow";
+'use client';
+import React, { useEffect, useRef } from 'react';
+import useWindow from './useWindow';
 
 interface Position {
   x: number;
@@ -26,41 +26,29 @@ export default function Scene() {
         ctx.fillRect(0, 0, dimension.width, dimension.height);
 
         // Reset globalCompositeOperation to 'source-over' for drawing the text
-        ctx.globalCompositeOperation = "source-over";
-
-        // Create a gradient for the text
-        const gradient = ctx.createLinearGradient(0, 0, dimension.width, 0);
-        gradient.addColorStop(0, "red");
-        gradient.addColorStop(0.5, "yellow");
-        gradient.addColorStop(1, "blue");
-
-        // Set up the text properties
-        ctx.font = "30px Arial";
-        ctx.textAlign = "center";
-        ctx.fillStyle = gradient; // Apply the gradient to the text
-
-        // Add shadow to make the text pop
-        ctx.shadowColor = "rgba(0,0,0,0.5)";
-        ctx.shadowOffsetX = 2;
-        ctx.shadowOffsetY = 2;
-        ctx.shadowBlur = 5;
-
-        // Draw the first text message
-        ctx.fillText(
-          "Erase this paint layer to know about me",
-          dimension.width / 1.5,
-          dimension.height / 4
-        );
-
-        // Draw the instruction text message
-        ctx.fillText(
-          "Instruction: Move the cursor to erase this paint layer",
-          dimension.width / 1.5,
-          dimension.height / 8
-        );
-
-        // Set the composite operation back to 'destination-out' for erasing
         ctx.globalCompositeOperation = "destination-out";
+
+        // // Create a gradient for the text
+        // const gradient = ctx.createLinearGradient(0, 0, dimension.width, 0);
+        // gradient.addColorStop(0, "red");
+        // gradient.addColorStop(0.5, "yellow");
+        // gradient.addColorStop(1, "blue");
+
+        // // Set up the text properties
+        // ctx.font = "30px Arial";
+        // ctx.textAlign = "center";
+        // ctx.fillStyle = gradient; // Apply the gradient to the text
+
+        // // Add shadow to make the text pop
+        // ctx.shadowColor = "rgba(0,0,0,0.5)";
+        // ctx.shadowOffsetX = 2;
+        // ctx.shadowOffsetY = 2;
+        // ctx.shadowBlur = 5;
+
+        
+
+        // // Set the composite operation back to 'destination-out' for erasing
+        // ctx.globalCompositeOperation = "destination-out";
       }
     }
   };
