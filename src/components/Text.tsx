@@ -6,7 +6,7 @@ export default function Text() {
       <p className=" text-3xl tracking-wider text-center w-1/2">
         Hi there , I am{" "}
         <span
-          className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-pacify text-5xl"
+          className="bg-gradient-to-r from-blue-500 via-green-400 to-purple-500 bg-clip-text text-transparent text-5xl font-bold"
           style={{ fontFamily: "Protest Guerrilla, sans-serif" }}
         >
           Pavan Narendra{" "}
