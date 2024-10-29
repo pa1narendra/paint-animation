@@ -30,8 +30,8 @@ export default function Scene() {
 
         // Create a gradient for the text
         const gradient = ctx.createLinearGradient(0, 0, dimension.width, 0);
-        gradient.addColorStop(0, "red");
         gradient.addColorStop(0.5, "yellow");
+
         gradient.addColorStop(1, "blue");
 
         // Set up the text properties
@@ -40,10 +40,10 @@ export default function Scene() {
         ctx.fillStyle = gradient; // Apply the gradient to the text
 
         // Add shadow to make the text pop
-        ctx.shadowColor = "rgba(0,0,0,0.5)";
-        ctx.shadowOffsetX = 2;
-        ctx.shadowOffsetY = 2;
-        ctx.shadowBlur = 5;
+        // ctx.shadowColor = "rgba(0,0,0,0.5)";
+        // ctx.shadowOffsetX = 2;
+        // ctx.shadowOffsetY = 2;
+        // ctx.shadowBlur = 5;
 
         // Draw the first text message
         ctx.fillText(
